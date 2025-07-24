@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="cssinfo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="nav_bar">
+    <nav>
+      <div class="logo-container">
+        <img src="./Images/Logo_FrontPage.png" alt="Logo" />
+      </div>
+      
+      <!-- Hamburger icon for mobile -->
+      <div class="menu-icon" id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Menu links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="./Index.html">HOME</a></li>
+        <li><a href="./portfolioabout.html">ABOUT</a></li>
+        <li><a href="./ProjctandSkillsinfo.html">SKILLS AND PROJECTS</a></li>
+        <li><a href="./portfoliocontactinfo.html">CONTACT ME</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Content -->
+  <div class="details">
+    <div class="details-text">
+      <h1>Always be Positive</h1>
+      <h1 style="color: orange;">
+        @<span class="auto_text"
+          style="text-shadow: 2px 3px yellowgreen; color: rgb(9, 196, 213); font-size: 35px;">
+        </span>
+      </h1>
+      <div class="anchor">
+        <a href="./Images/Gireesh_M.pdf" download>DOWNLOAD CV</a>
+      </div>
+    </div>
+    <img class="img1" src="./Images/ImageonFrontPage.jpg" alt="Gireesh Front Photo" />
+  </div>
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('.auto_text', {
+      strings: ['BATHALA GIREESH', 'FULL STACK DEVELOPER'],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true
+    });
+
+    // Toggle menu
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
